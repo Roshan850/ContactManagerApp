@@ -2,7 +2,12 @@ const mongoose = require('mongoose');
 // const { use } = require('react');
 
 const userSchema = mongoose.Schema({
-    name: {
+    user_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'User',
+    },
+    username: {
         type: String,
         required: [true, "Please add the user name"],
         
